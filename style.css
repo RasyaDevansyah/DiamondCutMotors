@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 70px;
+    background-color: #0D0D0D;
+}
+
+nav .left, nav .right{
+    display: flex;
+
+    align-items: center;
+    gap: 20px;
+    color: white;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    height: 700px;
+    font-size: 35px;
+    color: white;
+    overflow: hidden; 
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("assets/jaguar_xj_r_sport_003.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1; 
+}
+
+.content1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background-color: #D0D8D9;
+}
+
+.slider-wrapper{
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+    /* background-color: #0D0D0D; */
+}
+
+.slider{
+    display: flex;
+    aspect-ratio: 16/9;
+    overflow-x: auto;
+    
+    
+}
+.car-slide{
+    
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.car-slide img{
+    width: 60%;
+
+}
+.car-slide p{
+    width: 200px;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 100px 30px;
+    background-color: #0D0D0D;
+    color: #fff;
+    /* border-radius: 40px 40px 0 0; */
+}
+

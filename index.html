@@ -28,18 +28,39 @@
     </header>
 
     <div class="section-1">
+        <h2>Featured Cars</h2>
+        <br>
         <div class="wrapper">
-            <i class='bx bx-caret-left'></i>
             <div class="slider">
-                <img src="assets/413extreme-silver-33-1.webp" alt="">
-                <img src="assets\bmw_750li_xdrive_19_0.webp" alt="">
-                <img src="assets\buyers_guide_-_rolls_royce_wraith_2014_-_front_quarter_2.webp" alt="">
-                <img src="assets/413extreme-silver-33-1.webp" alt="">
+                <div class="mySlides fade">
+                    <img src="assets/413extreme-silver-33-1.webp" alt="">
+                </div>
+                <div class="mySlides fade">
+                    <img src="assets\bmw_750li_xdrive_19_0.webp" alt="">
+                </div>
+                <div class="mySlides fade">
+                    <img src="assets\buyers_guide_-_rolls_royce_wraith_2014_-_front_quarter_2.webp" alt="">
+                </div>
+                <div class="mySlides fade">
+                    <img src="assets\_jl58227_0.webp" alt="">
+                </div>
+
+
+
+                <i class='bx bx-caret-left' id="prev" onclick="plusSlides(-1)"></i>
+                <i class='bx bx-caret-right'id="next" onclick="plusSlides(1)"></i>
             </div>
-            <i class='bx bx-caret-right'></i>
-
-
+            
         </div>
+        <br>
+
+        <div class="buttons">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+       
     </div>
 
         

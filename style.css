@@ -175,8 +175,15 @@ footer{
 }
 
 
-.showroom-container{
-    height: 1000px;
+.showroom-section{
+    display: flex;
+    flex-direction: column;
+    padding: 30px 35px;
+    align-items: center;
+    justify-content: center;
     background-color: #878C89;
 }
 
+.showroom-section .section-header{
+    font-size: 40px;
+}

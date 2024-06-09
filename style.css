@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 
@@ -22,6 +21,8 @@ nav{
     padding: 0 40px;
     height: 70px;
     background-color: #0D0D0D;
+
+    box-shadow: 0px 4px 10px rgba(49, 46, 46, 0.5);
 }
 
 nav .left, nav .right{
@@ -41,7 +42,9 @@ nav .left, nav .right{
     pointer-events: none;
 }
 
-
+body{
+    background-color: #0D0D0D;
+}
 
 header {
     display: flex;
@@ -147,7 +150,6 @@ header::before {
     display: flex;
     justify-content: center;
     padding: 10px 0;
-
 }
 
 .carousel-index{
@@ -178,12 +180,123 @@ footer{
 .showroom-section{
     display: flex;
     flex-direction: column;
-    padding: 30px 35px;
     align-items: center;
     justify-content: center;
-    background-color: #878C89;
+    width: 100%;
+    padding: 0;
+    
+    margin-top: 30px;
+    margin-bottom: 100px;
+
+
+    padding: 0px;
+    z-index: -3;
+    background-color: #0D0D0D;
+    
 }
 
 .showroom-section .section-header{
     font-size: 40px;
+    color: #fff;
+}
+
+.carousel.showroom{
+    position: relative;
+    height: 700px;
+    width: 100%;
+
+}
+
+.carousel-track-container.showroom{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: #0D0D0D;
+    overflow: hidden;
+}
+
+.carousel-button.showroom{
+    z-index: 1;
+    color: rgba(255, 255, 255, 0.75);
+}
+.carousel-button-left.showroom{
+    left: 2px;
+}
+
+.carousel-button-right.showroom{
+    right: 2px;
+}
+
+.carousel-nav.showroom{
+    padding: 40px 0;
+}
+
+
+.carousel-index.showroom{
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.carousel-index.current-slide.showroom{
+    background: rgba(255, 255, 255, 0.75);
+}
+
+
+.showroom-gallery{
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px 300px;
+    grid-auto-flow: dense;
+    grid-gap: 10px;
+}
+
+.gallery-container{
+    transition: all 1s ease-in-out;
+}
+
+.item{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 50%;
+
+    transition: .7s ease-in-out;
+}
+
+.item:hover img{
+    transform: scale(1.2);
+}
+
+.c-2{
+    grid-column: span 2;
+}
+.c-3{
+    grid-column: span 3;
+}
+
+.c-4{
+    grid-column: span 4;
+}
+.c-5{
+    grid-column: span 5;
+}
+
+.r-2{
+    grid-row: span 2;
+}
+.r-3{
+    grid-row: span 3;
+}
+.r-4{
+    grid-row: span 4;
+}
+.r-5{
+    grid-row: span 5;
 }

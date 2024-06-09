@@ -30,36 +30,42 @@
     <div class="section-1">
         <h2>Featured Cars</h2>
         <br>
-        <div class="wrapper">
-            <div class="slider">
-                <div class="mySlides fade">
-                    <img src="assets/413extreme-silver-33-1.webp" alt="">
+        <div class="carousel">
+            <button class="carousel-button carousel-button-left">
+                <i class='bx bx-caret-left'></i>
+            </button>
+            
+            <div class="carousel-track-container">
+                <div class="carousel-track">
+                    <div class="slide">
+                        <img src="assets/413extreme-silver-33-1.webp" class="carousel-image" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="assets\bmw_750li_xdrive_19_0.webp" class="carousel-image" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="assets\buyers_guide_-_rolls_royce_wraith_2014_-_front_quarter_2.webp" class="carousel-image" alt="">
+                    </div>
+                    <div class="slide">
+                        <img src="assets\_jl58227_0.webp" class="carousel-image" alt="">
+                    </div>
                 </div>
-                <div class="mySlides fade">
-                    <img src="assets\bmw_750li_xdrive_19_0.webp" alt="">
-                </div>
-                <div class="mySlides fade">
-                    <img src="assets\buyers_guide_-_rolls_royce_wraith_2014_-_front_quarter_2.webp" alt="">
-                </div>
-                <div class="mySlides fade">
-                    <img src="assets\_jl58227_0.webp" alt="">
-                </div>
-
-
-
-                <i class='bx bx-caret-left' id="prev" onclick="plusSlides(-1)"></i>
-                <i class='bx bx-caret-right'id="next" onclick="plusSlides(1)"></i>
             </div>
+            
+            <button class="carousel-button carousel-button-right">
+                <i class='bx bx-caret-right'></i>
+            </button>
+
+            <div class="carousel-nav">
+                <button class="carousel-index current-slide"></button>
+                <button class="carousel-index"></button>
+                <button class="carousel-index"></button>
+                <button class="carousel-index"></button>
+            </div>
+            
             
         </div>
         <br>
-
-        <div class="buttons">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-            <span class="dot" onclick="currentSlide(4)"></span>
-        </div>
        
     </div>
 

@@ -62,88 +62,84 @@ header::before {
     align-items: center;
     justify-content: center;
     background-color: #D0D8D9;
-
-}
-
-.section-1 h2{
-    font-size: 40px;
 }
 
 
-.slider{
-    overflow: hidden;
-}
-
-.wrapper{
+.carousel{
     position: relative;
+    height: 800px;
+    width: 80%;
+    margin: 0 auto;
+
+}
+
+.carousel-image{
+    height: 100%;
     width: 100%;
-}
-
-.mySlides {
-    position: relative;
-    display: none;
-}
-
-.mySlides img {
-    height: 600px;
     object-fit: cover;
-    width: 100%;
 }
 
-.mySlides::before {
-    content: "";
+.carousel-track-container{
+    height: 100%;
+    background-color: black;
+    position: relative;
+}
+
+.carousel-track{
+    padding: 0;
+    margin: 0;
+}
+
+.slide{
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.3); /* Adjust the color and opacity here */
-    z-index: 1; /* Ensure it is above the image */
+    width: 100%;
 }
 
-.mySlides img {
-    position: relative;
-    z-index: 0; /* Ensure the image is below the tint */
-}
-
-
-#prev, #next{
-    cursor: pointer;
+.carousel-button{
     position: absolute;
     top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: #D0D8D9;
-    font-weight: bold;
-    font-size: 50px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-    z-index: 1;
-}
-
-#next{
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-.dot {
+    transform: translateY(-50%); 
+    background: transparent;
+    border: 0;  
     cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-    
+}
+.carousel-button i{
+    font-size: 100px;
+
 }
 
-.active, .dot:hover {
-    background-color: #717171;
+.carousel-button-left{
+    left: -130px;
 }
-  
+
+.carousel-button-right{
+    right: -130px;
+}
+
+
+.carousel-nav{
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+
+}
+
+.carousel-index{
+    border: 0;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: rgba(0,0,0,0.3);
+    margin: 0 12px;
+}
+
+.carousel-index.current-slide{
+    background: rgba(0,0,0,0.75);
+}
+
+
 
 
 footer{
@@ -154,64 +150,4 @@ footer{
     background-color: #0D0D0D;
     color: #fff;
 }
-
-/* Add sliding animation keyframes */
-@keyframes slide-in-right {
-    from {
-        transform: translateX(100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes slide-in-left {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0);
-    }
-}
-
-@keyframes slide-out-right {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
-
-@keyframes slide-out-left {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(100%);
-    }
-}
-
-.slide-in-right {
-    animation: slide-in-right 0.6s forwards;
-}
-
-.slide-in-left {
-    animation: slide-in-left 0.6s forwards;
-}
-
-.slide-out-right {
-    animation: slide-out-right 0.6s forwards;
-}
-
-.slide-out-left {
-    animation: slide-out-left 0.6s forwards;
-}
-/* .mySlides {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-} */
 

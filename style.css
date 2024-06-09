@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
+    font-family: "Inter", sans-serif;
+    font-weight: 200;
 }
 a{
     text-decoration: none;
@@ -23,11 +26,23 @@ nav{
 
 nav .left, nav .right{
     display: flex;
-
     align-items: center;
     gap: 20px;
     color: white;
 }
+
+.nav-button:hover, .nav-disabled{
+    color: rgba(256, 256, 256, 0.3);
+    
+}
+
+.nav-disabled{
+    cursor: default;
+    pointer-events: none;
+}
+
+
+
 header {
     display: flex;
     flex-direction: column;
@@ -48,7 +63,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url("assets/jaguar_xj_r_sport_003.jpeg");
+    background-image: url("assets/home/jaguar_xj_r_sport_003.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -62,6 +77,11 @@ header::before {
     align-items: center;
     justify-content: center;
     background-color: #D0D8D9;
+}
+
+.section-1 .section-header{
+    font-size: 40px;
+    padding: 12px 0;
 }
 
 
@@ -81,13 +101,17 @@ header::before {
 
 .carousel-track-container{
     height: 100%;
-    background-color: black;
+    background-color: #D0D8D9;
     position: relative;
+    overflow: hidden;
 }
 
 .carousel-track{
+    height: 100%;
     padding: 0;
     margin: 0;
+    position: relative;
+    transition: transform 750ms ease-in-out;
 }
 
 .slide{
@@ -133,14 +157,13 @@ header::before {
     height: 20px;
     background: rgba(0,0,0,0.3);
     margin: 0 12px;
+    transition: background 750ms ease-in-out;
+    cursor: pointer;
 }
 
 .carousel-index.current-slide{
     background: rgba(0,0,0,0.75);
 }
-
-
-
 
 footer{
     display: flex;
@@ -149,5 +172,11 @@ footer{
     padding: 60px 100px 30px;
     background-color: #0D0D0D;
     color: #fff;
+}
+
+
+.showroom-container{
+    height: 1000px;
+    background-color: #878C89;
 }
 

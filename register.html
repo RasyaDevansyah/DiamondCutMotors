@@ -11,7 +11,7 @@
 <body>
     <div class="login">
         <div class="login-container">
-            <h1 class="login-title">Login</h1>
+            <h1 class="login-title register">Create Account</h1>
             <div class="social-icons">
                 <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
                 <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
@@ -19,23 +19,37 @@
                 <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
             </div>
             <form action="" id="login-form">
-                <p class="or-use-email-pass">or use your email password</p>
+                <p class="or-use-email-pass">or use your email for registeration</p>
+                <div class="form">
+                    <input type="text" name="Name" id="name" placeholder="Full Name">
+                </div>
+                <div class="form number">
+                    <input type="number" name="phonenumber" id="PhoneNumber" placeholder="Phone Number">
+                </div>
                 <div class="form">
                     <input type="email" name="Email" id="email" placeholder="Email">
                 </div>
                 <div class="form">
                     <input type="password" name="Password" id="password" placeholder="Password">
                 </div>
+                <div class="form">
+                    <input type="password" name="ConfirmPassword" id="confirmpassword" placeholder="Confirm Password">
+                </div>
+                
+                <div class="terms-conditions">
+                    <input class="checkbox" type="checkbox" required> 
+                    <label>I agree to the terms and conditions</label>
+                </div>
 
-                <a class="forgot-password" href="#">Forget Your Password?</a>
+
                 <div class="buttons">
                     <button type="button" class="login-button" id="login-button">
-                        Login
+                        Register
                     </button>
                 </div>
 
                 <div class="register-link">
-                    <a class="link" href="register.html">Don't have an account? Register</a>
+                    <a class="link" href="login.html">Already have an account? Login</a>
                     
                 </div>
             </form>

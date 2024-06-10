@@ -360,6 +360,17 @@ form{
     text-align: center;
     gap: 15px;
 }
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
 
 
 input{
@@ -375,7 +386,6 @@ input{
 input::placeholder{
     color: black;
 }
-
 
 
 .login-button{
@@ -412,4 +422,29 @@ input::placeholder{
 .buttons{
     display: flex;
     gap: 10px;
+}
+
+/* REGISTER */
+
+.login-title.register{
+    font-size: 35px;
+    font-weight: 200;
+    letter-spacing: 3px;
+}
+
+.terms-conditions{
+    display: flex;
+    flex-direction: row;
+    font-size: 11px;
+    height: 40px;
+    width: 260px;
+    gap: 10px;
+
+    justify-content: center;
+    align-items: center;
+
+}
+.checkbox {
+    width: 20px; 
+    background-color: aqua;
 }

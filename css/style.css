@@ -178,6 +178,10 @@ footer{
 
 
 /* CARS */
+.section-1.cars{
+    margin: 35px 0px 60px 0px;
+    padding: 0;
+}
 
 .carousel.cars{
     position: relative;
@@ -228,6 +232,7 @@ footer{
     grid-auto-rows: 300px;
     grid-auto-flow: dense;
     grid-gap: 10px;
+    z-index: 0;
 }
 
 .car-container{
@@ -242,6 +247,11 @@ footer{
     display: flex;
     flex-direction: column;
     background-color: #202223;
+    transition: box-shadow 0.3s ease;
+}
+
+.car-item:hover {
+    box-shadow: 0 0 20px 5px var(--glow-color);
 }
 
 .car-image{
@@ -268,8 +278,21 @@ footer{
     object-position: 50% 50%;
 }
 
+.car-name{
+    font-size: 14px;
+}
+/* .car-brand{
+
+} */
+.car-price{
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
 
 /* SHOWROOM */
+
 
 .showroom-section{
     display: flex;
@@ -284,7 +307,6 @@ footer{
 
 
     padding: 0px;
-    z-index: -3;
     background-color: #0D0D0D;
     
 }

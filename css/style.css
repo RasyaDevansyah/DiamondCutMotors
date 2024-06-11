@@ -91,8 +91,8 @@ header::before {
 
 .carousel{
     position: relative;
-    height: 800px;
-    width: 80%;
+    height: 600px;
+    width: 95%;
     margin: 0 auto;
 
 }
@@ -139,11 +139,11 @@ header::before {
 }
 
 .carousel-button-left{
-    left: -130px;
+    left: 10px;
 }
 
 .carousel-button-right{
-    right: -130px;
+    right: 10px;
 }
 
 .carousel-nav{
@@ -281,9 +281,6 @@ footer{
 .car-name{
     font-size: 14px;
 }
-/* .car-brand{
-
-} */
 .car-price{
     font-size: 18px;
     font-weight: 600;
@@ -389,12 +386,6 @@ footer{
     grid-column: span 3;
 }
 
-.c-4{
-    grid-column: span 4;
-}
-.c-5{
-    grid-column: span 5;
-}
 
 .r-2{
     grid-row: span 2;
@@ -402,13 +393,43 @@ footer{
 .r-3{
     grid-row: span 3;
 }
-.r-4{
-    grid-row: span 4;
+
+
+/* ABOUT US */
+
+header.about-us::before {
+    -webkit-filter: blur(4px); 
+    filter: blur(4px);
+    
 }
-.r-5{
-    grid-row: span 5;
+.header-title.about-us{
+    top: 50px;
+    height: auto;
+    width: 70%;
+}
+.header-title.about-us h1{
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+.header-title.about-us p{
+    font-size: 17px;
+}
+.header-title.about-us h2{
+    font-size: 20px;
+    margin-bottom: 12px;
 }
 
+.social-icons-about-us{
+    margin-top: 10px;
+}
+.social-icons-about-us a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 2px;
+    width: 50px;
+    height: 40px;
+}
 
 
 /* LOGINN */

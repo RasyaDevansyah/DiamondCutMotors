@@ -232,7 +232,6 @@ footer{
     grid-auto-rows: 300px;
     grid-auto-flow: dense;
     grid-gap: 10px;
-    z-index: 0;
 }
 
 .car-container{
@@ -289,6 +288,18 @@ footer{
 
 
 /* SHOWROOM */
+
+.content-box {
+    position: absolute;
+    bottom: 0; 
+    background: rgba(0, 0, 0, 0.5); 
+    color: #f1f1f1; 
+    width: 100%; 
+    height: 40%;
+}
+.content{
+    padding: 30px 80px 10px 80px;
+}
 
 
 .showroom-section{
@@ -408,11 +419,11 @@ header.about-us::before {
     width: 70%;
 }
 .header-title.about-us h1{
-    font-size: 40px;
+    font-size: 35px;
     margin-bottom: 12px;
 }
 .header-title.about-us p{
-    font-size: 17px;
+    font-size: 14px;
 }
 .header-title.about-us h2{
     font-size: 20px;
@@ -474,8 +485,17 @@ header.about-us::before {
     height: 40px;
 }
 
-.or-use-email-pass, .forgot-password{
+.or-use-email-pass, .forgot-password, .invalid{
     font-size: 11px;
+}
+
+.invalid{
+    display: none;
+}
+
+.invalid.error{
+    display: block;
+    color: #e74c3c;
 }
 
 
@@ -506,14 +526,17 @@ input{
     border-radius: 0.4rem;
     border: 2px solid transparent;
     transition: border-color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1); 
+    color: black;
+    font-weight: 500;
 }
 
 input::placeholder{
     color: black;
+    font-weight: 200;
 }
 
 
-.login-button{
+.login-button, .register-button{
     margin-top: 10px;
     text-align: center;
     padding: 8px;
@@ -528,7 +551,7 @@ input::placeholder{
     transition: all 0.3s ease-in-out;
 }
 
-.login-button:hover {
+.login-button:hover , .register-button:hover{
     cursor: pointer;
     background-color: rgb(50, 50, 50);
 }
@@ -550,6 +573,27 @@ input::placeholder{
 }
 
 /* REGISTER */
+
+.register.form.success input{
+    border-color: #2ecc71;
+
+}
+
+.register.form.error input{
+    border-color: #e74c3c;
+}
+
+.register.form.error input::placeholder, .agree-text.error{
+    color: #e74c3c;
+}
+
+.register.agree-text.success {
+    color: #2ecc71;
+}
+
+
+
+
 
 .login-title.register{
     font-size: 35px;

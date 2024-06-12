@@ -355,8 +355,6 @@ footer{
 }
 
 
-
-
 .showroom-gallery{
     padding: 0 100px;
     display: grid;
@@ -593,8 +591,6 @@ input::placeholder{
 
 
 
-
-
 .login-title.register{
     font-size: 35px;
     font-weight: 200;
@@ -617,3 +613,114 @@ input::placeholder{
     width: 20px; 
     background-color: aqua;
 }
+
+@media screen and (max-width: 940px){
+
+    /* showroom */
+    .showroom-gallery{
+        padding: 0 100px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 200px 300px;
+        grid-auto-flow: row;
+        grid-gap: 10px;
+    }
+    
+    .c-2{
+        grid-column: span 1;
+    }
+    .c-3{
+        grid-column: span 1;
+    }
+    
+    
+    .r-2{
+        grid-row: span 2;
+    }
+    .r-3{
+        grid-row: span 3;
+    }
+    /* About Us */
+
+    .header-title.about-us{
+        top: 50px;
+        height: auto;
+        width: 70%;
+    }
+    .header-title.about-us h1{
+        font-size: 25px;
+        margin-bottom: 11px;
+    }
+    .header-title.about-us p{
+        font-size: 12px;
+    }
+    .header-title.about-us h2{
+        font-size: 19px;
+        margin-bottom: 11px;
+    }
+    
+    .social-icons-about-us{
+        margin-top: 10px;
+    }
+    .social-icons-about-us a{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 2px;
+        width: 50px;
+        height: 40px;
+    }
+
+    /* cars */
+
+    .section-2{
+        padding: 0 100px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 300px;
+        grid-auto-flow: dense;
+        grid-gap: 10px;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+
+    /* showroom */
+    .showroom-gallery{
+        padding: 0 100px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: 200px 300px;
+        grid-auto-flow: row;
+        grid-gap: 10px;
+    }
+    
+    .section-2{
+        padding: 0 100px;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: 300px;
+        grid-auto-flow: dense;
+        grid-gap: 10px;
+    }
+
+}
+
+
+/* 
+semua sumber yang digunakan:
+
+https://bmwstore.id/2024/01/06/bmw-resmikan-showroom-bmw-retail-next-pertama-di-indonesia/
+
+https://www.constructionplusasia.com/id/mercedes-benz-showroom/
+
+https://www.archilinea.it/en/project/automobili-lamborghini-cicd-showroom-service-area/
+
+https://www.motortrend.com/cars/
+https://www.dupontregistry.com/autos/results/bugatti
+
+
+
+
+*/

@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
     font-weight: 200;
 }
-a{
+
+a {
     text-decoration: none;
     color: #fff;
     transition: all 0.3s ease;
 }
 
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -25,24 +26,26 @@ nav{
     box-shadow: 0px 4px 10px rgba(49, 46, 46, 0.5);
 }
 
-nav .left, nav .right{
+nav .left,
+nav .right {
     display: flex;
     align-items: center;
     gap: 20px;
     color: white;
 }
 
-.nav-button:hover, .nav-disabled{
+.nav-button:hover,
+.nav-disabled {
     color: rgba(256, 256, 256, 0.3);
-    
+
 }
 
-.nav-disabled{
+.nav-disabled {
     cursor: default;
     pointer-events: none;
 }
 
-body{
+body {
     background-color: #0D0D0D;
 }
 
@@ -56,7 +59,7 @@ header {
     height: 700px;
     font-size: 35px;
     color: white;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
 header::before {
@@ -70,10 +73,10 @@ header::before {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: -1; 
+    z-index: -1;
 }
 
-.section-1{
+.section-1 {
     display: flex;
     flex-direction: column;
     padding: 30px 35px;
@@ -82,14 +85,14 @@ header::before {
     background-color: #0D0D0D;
 }
 
-.section-1 .section-header{
+.section-1 .section-header {
     font-size: 40px;
     padding: 12px 0;
     color: #ccc;
 }
 
 
-.carousel{
+.carousel {
     position: relative;
     height: 600px;
     width: 95%;
@@ -97,20 +100,20 @@ header::before {
 
 }
 
-.carousel-image{
+.carousel-image {
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
 
-.carousel-track-container{
+.carousel-track-container {
     height: 100%;
     background-color: #0D0D0D;
     position: relative;
     overflow: hidden;
 }
 
-.carousel-track{
+.carousel-track {
     height: 100%;
     padding: 0;
     margin: 0;
@@ -118,41 +121,42 @@ header::before {
     transition: transform 750ms ease-in-out;
 }
 
-.slide{
+.slide {
     position: absolute;
     top: 0;
     bottom: 0;
     width: 100%;
 }
 
-.carousel-button{
+.carousel-button {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); 
+    transform: translateY(-50%);
     background: transparent;
-    border: 0;  
+    border: 0;
     cursor: pointer;
 }
-.carousel-button i{
+
+.carousel-button i {
     font-size: 100px;
 
 }
 
-.carousel-button-left{
+.carousel-button-left {
     left: 10px;
 }
 
-.carousel-button-right{
+.carousel-button-right {
     right: 10px;
 }
 
-.carousel-nav{
+.carousel-nav {
     display: flex;
     justify-content: center;
     padding: 10px 0;
 }
 
-.carousel-index{
+.carousel-index {
     border: 0;
     border-radius: 50%;
     width: 20px;
@@ -163,11 +167,11 @@ header::before {
     cursor: pointer;
 }
 
-.carousel-index.current-slide{
+.carousel-index.current-slide {
     background: rgba(255, 255, 255, 0.75);
 }
 
-footer{
+footer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -178,12 +182,12 @@ footer{
 
 
 /* CARS */
-.section-1.cars{
+.section-1.cars {
     margin: 35px 0px 60px 0px;
     padding: 0;
 }
 
-.carousel.cars{
+.carousel.cars {
     position: relative;
     height: 200px;
     width: 400px;
@@ -191,41 +195,41 @@ footer{
 
 }
 
-.carousel-button{
+.carousel-button {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); 
+    transform: translateY(-50%);
     background: transparent;
-    border: 0;  
+    border: 0;
     cursor: pointer;
     z-index: 1;
     color: rgba(255, 255, 255, 0.75);
 }
 
-.slide.cars img{
+.slide.cars img {
     width: 100%;
     height: 100%;
     object-fit: contain;
 }
 
 
-.carousel-button.cars i{
+.carousel-button.cars i {
     font-size: 50px;
 }
 
-.carousel-button-left.cars{
+.carousel-button-left.cars {
     left: -20px;
 }
 
-.carousel-button-right.cars{
+.carousel-button-right.cars {
     right: -20px;
 }
 
-.carousel-index.cars{
+.carousel-index.cars {
     margin: 0 6px;
 }
 
-.section-2{
+.section-2 {
     padding: 0 100px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -234,11 +238,26 @@ footer{
     grid-gap: 10px;
 }
 
-.car-container{
+.car-container {
     transition: all 1s ease-in-out;
 }
 
-.car-item{
+
+.car-item {
+    --glow-color: #000;
+    /* JS will overwrite this */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Apply the glow by default using the variable from your JS */
+    box-shadow: 0 0 30px 5px var(--glow-color);
+}
+
+.car-item:hover {
+    /* You can still have a hover effect, like scaling up */
+    transform: scale(1.05);
+}
+
+/* .car-item{
     width: 100%;
     height: 100%;
     
@@ -251,36 +270,37 @@ footer{
 
 .car-item:hover {
     box-shadow: 0 0 20px 5px var(--glow-color);
-}
+} */
 
-.car-image{
+.car-image {
     width: 100%;
     height: 200px;
     padding: 20px 20px 0px 20px;
 }
 
-.car-text{
+.car-text {
     width: 100%;
     max-width: 390px;
     height: 50%;
     margin: 10px 20px 20px 20px;
     color: #ccc;
-    font-size:13px;
+    font-size: 13px;
     overflow-wrap: break-word;
 }
 
 
-.car-image img{
+.car-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: 50% 50%;
 }
 
-.car-name{
+.car-name {
     font-size: 14px;
 }
-.car-price{
+
+.car-price {
     font-size: 18px;
     font-weight: 600;
 }
@@ -291,46 +311,47 @@ footer{
 
 .content-box {
     position: absolute;
-    bottom: 0; 
-    background: rgba(0, 0, 0, 0.5); 
-    color: #f1f1f1; 
-    width: 100%; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 100%;
     height: 40%;
 }
-.content{
+
+.content {
     padding: 30px 80px 10px 80px;
 }
 
 
-.showroom-section{
+.showroom-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
     padding: 0;
-    
+
     margin-top: 30px;
     margin-bottom: 100px;
 
 
     padding: 0px;
     background-color: #0D0D0D;
-    
+
 }
 
-.showroom-section .section-header{
+.showroom-section .section-header {
     font-size: 40px;
     color: #fff;
 }
 
-.carousel.showroom{
+.carousel.showroom {
     position: relative;
     height: 700px;
     width: 100%;
 }
 
-.carousel-track-container.showroom{
+.carousel-track-container.showroom {
     height: 100%;
     width: 100%;
     position: relative;
@@ -338,24 +359,25 @@ footer{
     overflow: hidden;
 }
 
-.carousel-button.showroom{
+.carousel-button.showroom {
     z-index: 1;
     color: rgba(255, 255, 255, 0.75);
 }
-.carousel-button-left.showroom{
+
+.carousel-button-left.showroom {
     left: 2px;
 }
 
-.carousel-button-right.showroom{
+.carousel-button-right.showroom {
     right: 2px;
 }
 
-.carousel-nav.showroom{
+.carousel-nav.showroom {
     padding: 40px 0;
 }
 
 
-.showroom-gallery{
+.showroom-gallery {
     padding: 0 100px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -364,18 +386,18 @@ footer{
     grid-gap: 10px;
 }
 
-.gallery-container{
+.gallery-container {
     transition: all 1s ease-in-out;
 }
 
-.item{
+.item {
     width: 100%;
     height: 100%;
     position: relative;
     overflow: hidden;
 }
 
-.item img{
+.item img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -384,22 +406,24 @@ footer{
     transition: .7s ease-in-out;
 }
 
-.item:hover img{
+.item:hover img {
     transform: scale(1.2);
 }
 
-.c-2{
+.c-2 {
     grid-column: span 2;
 }
-.c-3{
+
+.c-3 {
     grid-column: span 3;
 }
 
 
-.r-2{
+.r-2 {
     grid-row: span 2;
 }
-.r-3{
+
+.r-3 {
     grid-row: span 3;
 }
 
@@ -407,31 +431,36 @@ footer{
 /* ABOUT US */
 
 header.about-us::before {
-    -webkit-filter: blur(4px); 
+    -webkit-filter: blur(4px);
     filter: blur(4px);
-    
+
 }
-.header-title.about-us{
+
+.header-title.about-us {
     top: 50px;
     height: auto;
     width: 70%;
 }
-.header-title.about-us h1{
+
+.header-title.about-us h1 {
     font-size: 35px;
     margin-bottom: 12px;
 }
-.header-title.about-us p{
+
+.header-title.about-us p {
     font-size: 14px;
 }
-.header-title.about-us h2{
+
+.header-title.about-us h2 {
     font-size: 20px;
     margin-bottom: 12px;
 }
 
-.social-icons-about-us{
+.social-icons-about-us {
     margin-top: 10px;
 }
-.social-icons-about-us a{
+
+.social-icons-about-us a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -443,7 +472,7 @@ header.about-us::before {
 
 /* LOGINN */
 
-.login{
+.login {
     color: white;
     width: 100vw;
     height: 100vh;
@@ -452,7 +481,7 @@ header.about-us::before {
     align-items: center;
 }
 
-.login-container{
+.login-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -466,13 +495,13 @@ header.about-us::before {
     gap: 25px;
 }
 
-.login-title{
+.login-title {
     font-size: 40px;
     font-weight: 200;
     letter-spacing: 10px;
 }
 
-.social-icons a{
+.social-icons a {
     border: 1px solid #ccc;
     border-radius: 20%;
     display: inline-flex;
@@ -483,22 +512,24 @@ header.about-us::before {
     height: 40px;
 }
 
-.or-use-email-pass, .forgot-password, .invalid{
+.or-use-email-pass,
+.forgot-password,
+.invalid {
     font-size: 11px;
 }
 
-.invalid{
+.invalid {
     display: none;
 }
 
-.invalid.error{
+.invalid.error {
     display: block;
     color: #e74c3c;
 }
 
 
-form{
-    position:relative;
+form {
+    position: relative;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -507,34 +538,36 @@ form{
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
+
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 
-input{
+input {
     background-color: #cfd4d157;
     height: 40px;
     width: 260px;
     padding: 0 0.75rem;
     border-radius: 0.4rem;
     border: 2px solid transparent;
-    transition: border-color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1); 
+    transition: border-color 0.3s cubic-bezier(0.25, 0.01, 0.25, 1);
     color: black;
     font-weight: 500;
 }
 
-input::placeholder{
+input::placeholder {
     color: black;
     font-weight: 200;
 }
 
 
-.login-button, .register-button{
+.login-button,
+.register-button {
     margin-top: 10px;
     text-align: center;
     padding: 8px;
@@ -549,39 +582,42 @@ input::placeholder{
     transition: all 0.3s ease-in-out;
 }
 
-.login-button:hover , .register-button:hover{
+.login-button:hover,
+.register-button:hover {
     cursor: pointer;
     background-color: rgb(50, 50, 50);
 }
 
-.register-link{
+.register-link {
     position: relative;
     height: 20px;
 }
-.link{
+
+.link {
     position: absolute;
     right: -60px;
     bottom: -10px;
     font-size: 9px;
 }
 
-.buttons{
+.buttons {
     display: flex;
     gap: 10px;
 }
 
 /* REGISTER */
 
-.register.form.success input{
+.register.form.success input {
     border-color: #2ecc71;
 
 }
 
-.register.form.error input{
+.register.form.error input {
     border-color: #e74c3c;
 }
 
-.register.form.error input::placeholder, .agree-text.error{
+.register.form.error input::placeholder,
+.agree-text.error {
     color: #e74c3c;
 }
 
@@ -591,13 +627,13 @@ input::placeholder{
 
 
 
-.login-title.register{
+.login-title.register {
     font-size: 35px;
     font-weight: 200;
     letter-spacing: 3px;
 }
 
-.terms-conditions{
+.terms-conditions {
     display: flex;
     flex-direction: row;
     font-size: 11px;
@@ -609,15 +645,32 @@ input::placeholder{
     align-items: center;
 
 }
+
 .checkbox {
-    width: 20px; 
+    width: 20px;
     background-color: aqua;
 }
 
-@media screen and (max-width: 940px){
+@media screen and (max-width: 1060px) {
+
+
+    .header-title {
+        top: 50px;
+        height: auto;
+        width: 70%;
+    }
+
+    .header-title h1 {
+        font-size: 45px;
+        margin-bottom: 11px;
+    }
+
+    .header-title p {
+        font-size: 22px;
+    }
 
     /* showroom */
-    .showroom-gallery{
+    .showroom-gallery {
         padding: 0 100px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -625,44 +678,51 @@ input::placeholder{
         grid-auto-flow: row;
         grid-gap: 10px;
     }
-    
-    .c-2{
+
+    .c-2 {
         grid-column: span 1;
     }
-    .c-3{
+
+    .c-3 {
         grid-column: span 1;
     }
-    
-    
-    .r-2{
+
+
+    .r-2 {
         grid-row: span 2;
     }
-    .r-3{
+
+    .r-3 {
         grid-row: span 3;
     }
+
     /* About Us */
 
-    .header-title.about-us{
+    .header-title.about-us {
         top: 50px;
         height: auto;
         width: 70%;
     }
-    .header-title.about-us h1{
+
+    .header-title.about-us h1 {
         font-size: 25px;
         margin-bottom: 11px;
     }
-    .header-title.about-us p{
+
+    .header-title.about-us p {
         font-size: 12px;
     }
-    .header-title.about-us h2{
+
+    .header-title.about-us h2 {
         font-size: 19px;
         margin-bottom: 11px;
     }
-    
-    .social-icons-about-us{
+
+    .social-icons-about-us {
         margin-top: 10px;
     }
-    .social-icons-about-us a{
+
+    .social-icons-about-us a {
         display: inline-flex;
         justify-content: center;
         align-items: center;
@@ -673,7 +733,7 @@ input::placeholder{
 
     /* cars */
 
-    .section-2{
+    .section-2 {
         padding: 0 100px;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -681,13 +741,13 @@ input::placeholder{
         grid-auto-flow: dense;
         grid-gap: 10px;
     }
-    
+
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 788px) {
 
     /* showroom */
-    .showroom-gallery{
+    .showroom-gallery {
         padding: 0 100px;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -695,8 +755,8 @@ input::placeholder{
         grid-auto-flow: row;
         grid-gap: 10px;
     }
-    
-    .section-2{
+
+    .section-2 {
         padding: 0 100px;
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -706,21 +766,3 @@ input::placeholder{
     }
 
 }
-
-
-/* 
-semua sumber yang digunakan:
-
-https://bmwstore.id/2024/01/06/bmw-resmikan-showroom-bmw-retail-next-pertama-di-indonesia/
-
-https://www.constructionplusasia.com/id/mercedes-benz-showroom/
-
-https://www.archilinea.it/en/project/automobili-lamborghini-cicd-showroom-service-area/
-
-https://www.motortrend.com/cars/
-https://www.dupontregistry.com/autos/results/bugatti
-
-
-
-
-*/
